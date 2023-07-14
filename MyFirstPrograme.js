@@ -267,6 +267,348 @@ function change(num){
 changed=change(10);
 console.log(changed);
 
+function nextinline(arr,item){
+    return arr.shift(); 
+}
+var testarr=[1,2,3,4,5];
+
+console.log("Before : " + JSON.stringify(testarr));
+console.log(nextinline(testarr,6));
+console.log("After: " + JSON.stringify(testarr));
+
+function trueorfalse(wasthattrue){
+    if(wasthattrue){
+        return "yes , it is true";
+    }
+    return "no, that is false";
+}
+console.log(trueorfalse(false));
+
+function testequal(val){
+    if (val==12){
+        return "equal";
+    }
+    return "not equal";
+
+}
+console.log(testequal(10));
+
+function compareequality(a,b){
+    if (a==b){
+        return "equal";
+    }
+    return "not equal";
+
+}
+console.log(compareequality(10,"10"));
+
+function compareequality(a,b){
+    if (a==b){
+        return "equal";
+    }
+    return "not equal";
+
+}
+console.log(compareequality(10,"15"));
+
+function testequal(val){
+    if (val!=99){
+        return "equal";
+    }
+    return "not equal";
+
+}
+console.log(testequal(10));
+
+function testgraterthan(val){
+    if (val>100){
+        return "over 100";
+    }
+    if (val>10){
+        return "over 10";
+    }
+    return "10 or under";
+}
+console.log(testgraterthan(10));
+
+function testgraterthanequal(val){
+    if (val>=20){
+        return "20 or over";
+    }
+    if (val>=10){
+        return "10 or over";
+    }
+    return "less than ten";
+}
+console.log(testgraterthanequal(10));
+
+function testlessthan(val){
+    if (val<20){
+        return "under 20";
+    }
+    if (val<50){
+        return "under 50";
+    }
+    return "55 or over";
+}
+console.log(testlessthan(10));
+
+function testlessthanequal(val){
+    if (val<=20){
+        return "small than or equal 20";
+    }
+    if (val<=24){
+        return "smaller tha or equal 24";
+    }
+    return "more than 24";
+}
+console.log(testlessthanequal(10));
+
+function logic(val){
+    if (val <10 || val > 20 ){
+        return "outside";
+    }
+    return "inside";
+}
+console.log(logic(15));
+
+function testelse(val){
+    var result=""
+    if (val>5){
+        result= "biger than 5";
+    }else{
+    result="5 or smaller";
+    }
+    return result;
+}
+console.log(testelse(10));
+
+function testifelse(val){
+    if (val>10){
+        retur="grather than 10";
+    }else if (val<5) {
+        retur="small than 5";
+    }else{return "between 5 and 10";
+}
+    }
+    
+console.log(testifelse(7));
+
+function mylogic(val){
+    if (val<5){
+        retur="less than 5";
+    }else if (val<10) {
+        retur="less than 10";
+    }else{return "grather than or equal 10";
+}
+    }
+    
+console.log(mylogic(3));
+
+function testline(num){
+    if (num<5){
+        return "Tiny"
+    }else if (num<10) {
+        return"small"
+    }else if (num<15){
+        return "medium"
+    }else if (num<20){
+        return "large"
+    }else{
+        return "huge"
+    } 
+}
+console.log(testline(7));
+
+
+var names =[ "Hole-in-hole!","egle","bridie","par","bogey","double bogey","Go-Home!"];
+function golfscore(par,strocks){
+    if (strocks==1){
+        return names[o]
+    }else if(strocks<=par-2){
+        return names[1]
+    }else if(strocks==par-1){
+        return names[2]
+    }else if(strocks==par){
+        return names[3]
+    }else if(strocks==par+1){
+        return names[4]
+    }else if(strocks==par+2){
+        return names[5]
+    }else if(strocks>=par-3){
+        return names[6]
+    }
+    
+}
+console.log(golfscore(5,4));
+
+
+function caseinswitch(val){
+    var answer="";
+    switch (val){
+        case 1:
+            answer="alpha";
+            break;
+
+        case 2:
+            answer="beta";
+            break;
+        case 3:
+                answer="gama";
+                break;    
+            
+    }
+    return answer;
+}
+console.log(caseinswitch(2));
+
+function sequenceswitch(val){
+    var answer="";
+    switch (val){
+        case 1:
+        case 2:
+        case 3:
+    answer="low";
+    break;  
+        case 4:
+        case 5:
+        case 6:
+    answer="mid";
+    break;    
+        case 7:
+        case 8:
+        case 9:
+    answer="high";
+    break;      
+    }
+    return answer;
+}
+console.log(sequenceswitch(8));
+
+
+function isless(a,b){
+    return a<b;
+}
+console.log(isless(10,15));
+
+
+var count = 0;
+function cc(card){
+    switch(card){
+         case 2:
+         case 3:
+         case 4:
+         case 5:
+         case 6:
+            count ++;
+         break;
+         case 10:
+         case "j":
+         case "Q":
+         case "k":
+         case "a" :
+            count --;
+            break;
+    }
+var holdbet="hold";
+if (count>0){
+    holdbet="bet";
+    
+}
+    return count + " "+ holdbet;
+}
+cc(2),cc(3),cc(7),cc('k'),cc('a');
+console.log(cc(4));
+
+var ourdog={
+    "name":"camper",
+    "legs":4,
+    "tails":1,
+    "friends":["everything!"],
+};
+ourdog.name="happy camper";
+console.log(ourdog);
+
+
+var myobj={
+    gift:"pen",
+    pet:"cat",
+    bed:"solo",
+};
+function checkObj(checkProp){
+    if (myobj.hasOwnProperty(checkProp)){
+        return myobj[checkProp];
+    }else{
+        return "not found"
+    }
+    }
+console.log(checkObj("gift"));
+
+var mystorage={
+    "car":{
+        "inside":{
+            "glove box":"maps",
+            "passenger seat":"crumbs",
+        },
+        "outside":{
+            "truck":"jack"
+        }
+    }
+};
+var gloveBoxContents= mystorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+var myArray = [];
+ var i = 0;
+while(i < 5) {
+myArray.push (i) ;
+
+i++;
+}
+console. log (myArray) ;
+
+var myarray=[];
+for (var  i=1; i<6; i++){
+    myarray.push(i);
+}
+console.log(myArray);
+
+
+var myarray=[];
+for (var  i=1; i<10; i+=2){
+    myarray.push(i);
+}
+console.log(myArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
