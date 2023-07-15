@@ -580,6 +580,225 @@ for (var  i=1; i<10; i+=2){
 }
 console.log(myArray);
 
+var myarray=[2,3,4,5,6];
+var total=0;
+for (var i=0;i<myarray.length;i++){
+    total+=myarray[i];
+}
+console.log(total);
+
+function multiplyall(arr){
+    var product=1;
+    for (var i=0;i< arr.length;i++){
+      for  (var j=0;j<arr[i].length;j++)  {
+        product*=arr[i][j];
+      }
+    }
+    return product;
+}
+var product=multiplyall([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+
+var myarray=[];
+var i =10;
+do {
+    myarray.push(i);
+    i++;
+ }   
+while(i<5)
+console.log(i,myarray);
+
+var contacts=[ 
+    {
+"FirstName": "Akira",
+"lastName": "Laine",
+"number": "0543236543",
+"likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+{
+"firstiame":"Harry",
+"lastName": "Potter",
+"number": "0994372684",
+"likes": ["Hogwarts",
+"Magic", "Hagrid"]
+},
+{
+"firstName": "sherlock",
+"lastName":"Holmes",
+"number": "0487345643",
+"likes": ["Intriguing Cases", "Violin"]
+},
+{
+"firstName":"Kristian",
+"LastName": "Vos",
+"number": "unknown",
+"likes": ["JavaScript", "Gamine","Foxes"]
+}
+];
+function lookupprofile(name,prop){
+    for (var i=0;i< contacts.length;i++){
+        if (contacts[i].firstname===name){
+            return contacts[i][prop] || "no such property";
+
+        }
+    }
+    return "no such contact";
+}
+var data =lookupprofile("sherlock","likes");
+console.log(data);
+
+var randomNumberBetweenand19 = Math. floor (Math. random () * 20);
+function randomWholeNum () {
+return Math. floor (Math. random () * 10) ;
+}
+console. log (randomWholeNum ()) ;
+
+function ourRandomRange (ourMin, ourMax) {
+    return Math. floor (Math. random () * (ourMax - ourMin
+    - ourMin + 1)) *ourMin;}
+    ourRandomRange (1, 9) ;
+    function randomRange (myMin, myMax) {
+    return Math. floor (Math. random() * (myMax - myMin + 1)) + myMin;
+    }
+    var myRandom=randomRange(5,15);
+    console.log(myRandom);
+
+    function converintointeger(str){
+return parseInt(str,2);
+    }
+   console.log(converintointeger("100011"));
+
+   function checkequal(num){
+    return num >0 
+   }
+
+   function checkScope () {
+    "use strict";
+    let i = "'function scope";
+    if (true) {
+    let i = "block scope";
+    console. log ("Block scope i is: ", i);
+    }
+    console. log ("Function scope i is: ", i);
+    return i;
+}
+console.log(checkScope());
+
+function printManyTimes (str)
+{
+"use strict";
+const SENTENCE = str + " is cool!";
+for(let i = 0; i < str. length; i+=2) {
+console. log (SENTENCE) ;
+}
+}
+console.log(printManyTimes ("Nayanajith"));
+
+var myConcat =(arr1,arr2)=>arr1.concat(arr2);
+console.log(myConcat([1,2],[3,4,5]));
+
+
+const increment=(function(){
+    return function increment(number,value=1){
+        return number+value;
+        };
+})();
+console.log(increment(5,2));
+console.log(increment(5));
+
+
+const arr1 = ['JAN','FEB','MAR','APR', 'MAY'];
+let arr2;
+(function () {
+arr2 = [...arr1];
+arr1 [0]= 'potato'
+})();
+console. log (arr2);
+
+const[z,x,y]=[1,2,3,4,5,6];
+console.log(z,x,y);
+
+
+const source=[1,2,3,4,5,6,7,8,9,10];
+function removefirsttwo(list){
+    const [, ,...arr]=list;
+    return arr;
+}
+const arr=removefirsttwo(source);
+console.log(arr);
+console.log(source);
+
+
+const stats ={
+Max:58.78,
+standard_deviation: 4.34 ,
+median: 34.54, 
+mode: 23.87, 
+min: -0.75, 
+average: 35.85
+};
+const half = (function(){
+return function half({max,min}) {
+return (max + min) / 2.0;
+};
+})();
+console. log (stats) ;
+console. log (half (stats)) ;
+
+const person={
+    name: "nayanajith",
+    age: 18
+};
+const greeting=`Hello, my name is ${person.name}!
+I am ${person.age}years old.`;
+console.log(greeting);
+
+
+const createPerson = ( name,age,gender)=>({name,age,gender});
+console.log(createPerson("nayanajith",18,"male"));
+
+const bicycle={
+    gear: 2,
+    setgear(newgear){
+        "use strict";
+        this.gear=newgear;
+    }
+};
+bicycle.setgear(3);
+console.log(bicycle.gear);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
